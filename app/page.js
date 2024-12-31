@@ -1,6 +1,10 @@
 "use client"
 
-import NotesViewer from '../components/NotesViewer'
+import dynamic from 'next/dynamic'
+
+const NotesViewer = dynamic(() => import('../components/NotesViewer'), {
+  ssr: false
+})
 
 export default function Home() {
   return (
